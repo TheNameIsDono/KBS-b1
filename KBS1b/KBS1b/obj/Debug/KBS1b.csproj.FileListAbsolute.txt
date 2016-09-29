@@ -1,0 +1,9 @@
+c:\users\donov\documents\visual studio 2015\Projects\KBS1b\KBS1b\bin\Debug\KBS1b.exe.config
+c:\users\donov\documents\visual studio 2015\Projects\KBS1b\KBS1b\bin\Debug\KBS1b.exe
+c:\users\donov\documents\visual studio 2015\Projects\KBS1b\KBS1b\bin\Debug\KBS1b.pdb
+c:\users\donov\documents\visual studio 2015\Projects\KBS1b\KBS1b\obj\Debug\KBS1b.csprojResolveAssemblyReference.cache
+c:\users\donov\documents\visual studio 2015\Projects\KBS1b\KBS1b\obj\Debug\KBS1b.Form1.resources
+c:\users\donov\documents\visual studio 2015\Projects\KBS1b\KBS1b\obj\Debug\KBS1b.Properties.Resources.resources
+c:\users\donov\documents\visual studio 2015\Projects\KBS1b\KBS1b\obj\Debug\KBS1b.csproj.GenerateResource.Cache
+c:\users\donov\documents\visual studio 2015\Projects\KBS1b\KBS1b\obj\Debug\KBS1b.exe
+c:\users\donov\documents\visual studio 2015\Projects\KBS1b\KBS1b\obj\Debug\KBS1b.pdb
