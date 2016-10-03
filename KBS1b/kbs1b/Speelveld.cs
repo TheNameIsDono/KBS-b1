@@ -17,8 +17,8 @@ namespace kbs1b
         public Speelveld()
         {
             //player1 = new Player(input);
-            start = Image.FromFile(@"E:\school\Jaar 2.2\kbs\kbs1b\start1.png");
-            finish = Image.FromFile(@"E:\school\Jaar 2.2\kbs\kbs1b\finish.png");
+            start = Properties.Resources.start1;
+            finish = Properties.Resources.finish;
             
 
 

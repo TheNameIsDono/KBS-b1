@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+
 
 namespace kbs1b
 {
@@ -16,7 +18,7 @@ namespace kbs1b
         static int count = 0;
         bool explode = false;
         bool richtingDown = true;
-        Image explosion = Image.FromFile(@"E:\school\Jaar 2.2\kbs\kbs1b\explosion.png");
+        Image explosion = Properties.Resources.explosion;
         Input input = new Input('W', 'A', 'S', 'D');
         Settings settings = new Settings();
         Player player1;
@@ -240,7 +242,7 @@ namespace kbs1b
                 foreach (Player player in players)
                 {
 
-                    Image img = Image.FromFile(@"E:\GitHub\KBS-b1\KBS1b\KBS1b\kappa.png");
+                    Image img = Properties.Resources.kappa;
                     PointF point = new PointF(player.XPOS, player.YPOS);
                     //Rectangle rect = new Rectangle(player.XPOS, player.YPOS, 25, 25);
                     //Color color = Color.FromArgb(255, 255, 0, 0);
