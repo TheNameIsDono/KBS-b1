@@ -12,7 +12,7 @@ C:\Users\Stijn_000\Documents\GitHub\KBS-b1\Field\kbs1b\kbs1b\obj\Debug\kbs1b.exe
 C:\Users\Stijn_000\Documents\GitHub\KBS-b1\Field\kbs1b\kbs1b\obj\Debug\kbs1b.pdb
 C:\Users\Stijn_000\Documents\GitHub\KBS-b1\Field\kbs1b\kbs1b\bin\Debug\kbs1b.exe
 C:\Users\Stijn_000\Documents\GitHub\KBS-b1\Field\kbs1b\kbs1b\bin\Debug\kbs1b.pdb
-C:\Users\Stijn_000\Documents\GitHub\KBS-b1\Field\kbs1b\kbs1b\obj\Debug\kbs1b.csprojResolveAssemblyReference.cache
 C:\Users\Stijn_000\Documents\GitHub\KBS-b1\Field\kbs1b\kbs1b\obj\Debug\kbs1b.Form1.resources
 C:\Users\Stijn_000\Documents\GitHub\KBS-b1\Field\kbs1b\kbs1b\obj\Debug\kbs1b.Properties.Resources.resources
 C:\Users\Stijn_000\Documents\GitHub\KBS-b1\Field\kbs1b\kbs1b\obj\Debug\kbs1b.csproj.GenerateResource.Cache
+C:\Users\Stijn_000\Documents\GitHub\KBS-b1\Field\kbs1b\kbs1b\obj\Debug\kbs1b.csprojResolveAssemblyReference.cache

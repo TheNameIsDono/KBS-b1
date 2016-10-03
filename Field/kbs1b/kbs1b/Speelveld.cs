@@ -16,14 +16,15 @@ namespace kbs1b
         //Input input = new Input('W', 'A', 'S', 'D');
         public Speelveld()
         {
-            //player1 = new Player(input);
-            start = Image.FromFile(@"..\\..\\start1.png");
-            finish = Image.FromFile(@"..\\..\\finish.png");
-            
+            start = Properties.Resources.start1;
+            finish = Properties.Resources.finish;
+            //start = Image.FromFile(@"..\\..\\start1.png");
+            //finish = Image.FromFile(@"..\\..\\finish.png");
 
 
 
-              
+
+
 
 
         }

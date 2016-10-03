@@ -16,6 +16,7 @@ namespace kbs1b
         static int count = 0;
         bool explode = false;
         bool richtingDown = true;
+
         Image explosion = Image.FromFile(@"..\\..\\explosion.png");
         Image bush = Image.FromFile(@"..\\..\\bush.png");
         Image bushver = Image.FromFile(@"..\\..\\bushvertical.png");
@@ -28,6 +29,8 @@ namespace kbs1b
         private List<Obstacle> obstacles = new List<Obstacle>();
         public Obstacle obstacle1, obstacle2,obstacle3, obstacle4, obstacle5, obstacle6;
         int xMax, yMax;
+
+
         public Form1()
         {
             InitializeComponent();
@@ -47,6 +50,14 @@ namespace kbs1b
             yMax = pbCanvas.Size.Height - 35;
             timer1.Start();
         }
+
+        //private void MovetoStart()
+        //{
+        //    Point startingPoint = panel.Location;
+        //    startingPoint.Offset(45, 90);
+        //    players.Position = PointToScreen(startingPoint);
+
+        //}
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
@@ -256,13 +267,30 @@ namespace kbs1b
                 foreach (Player player in players)
                 {
 
-                    Rectangle rect = new Rectangle(player.XPOS, player.YPOS, 25, 25);
-                    Color color = Color.FromArgb(255, 255, 0, 0);
-                    Pen pen = new Pen(player.COLOR, 10);
-                    e.Graphics.DrawRectangle(pen, rect);
+                    Image img = Image.FromFile(@"..\\..\\kappa.png");
+                    PointF point = new PointF(player.XPOS, player.YPOS);
+                    //Rectangle rect = new Rectangle(player.XPOS, player.YPOS, 25, 25);
+                    //Color color = Color.FromArgb(255, 255, 0, 0);
+                    //Pen pen = new Pen(player.COLOR, 10);
+                    e.Graphics.DrawImage(img, point);
 
+                    if (player1.XPOS < 30 || player1.XPOS > 600)
+                    {
+                        player1.XPOS = 45;
+                        player1.YPOS = 90;
+                    }
 
+                    if(player1.YPOS < 35 || player1.YPOS > 310)
+                    {
+                        player1.XPOS = 45;
+                        player1.YPOS = 90;
+                    }
 
+                    if(player1.XPOS > 130 && player1.XPOS < 175 && player1.YPOS > 65 && player1.YPOS < 190)
+                    {
+                        player1.XPOS = 45;
+                        player1.YPOS = 90;
+                    }
                 }
 
                 //teken de obstacles op het veld.

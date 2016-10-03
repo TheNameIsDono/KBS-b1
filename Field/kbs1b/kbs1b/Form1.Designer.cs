@@ -53,7 +53,7 @@
             // 
             // Form1
             // 
-            this.ClientSize = new System.Drawing.Size(794, 407);
+            this.ClientSize = new System.Drawing.Size(703, 407);
             this.Controls.Add(this.pbCanvas);
             this.Name = "Form1";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
