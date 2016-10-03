@@ -7,3 +7,12 @@ c:\users\donov\documents\visual studio 2015\Projects\KBS1b\KBS1b\obj\Debug\KBS1b
 c:\users\donov\documents\visual studio 2015\Projects\KBS1b\KBS1b\obj\Debug\KBS1b.csproj.GenerateResource.Cache
 c:\users\donov\documents\visual studio 2015\Projects\KBS1b\KBS1b\obj\Debug\KBS1b.exe
 c:\users\donov\documents\visual studio 2015\Projects\KBS1b\KBS1b\obj\Debug\KBS1b.pdb
+E:\GitHub\KBS-b1\KBS1b\KBS1b\bin\Debug\KBS1b.exe.config
+E:\GitHub\KBS-b1\KBS1b\KBS1b\obj\Debug\KBS1b.exe
+E:\GitHub\KBS-b1\KBS1b\KBS1b\obj\Debug\KBS1b.pdb
+E:\GitHub\KBS-b1\KBS1b\KBS1b\bin\Debug\KBS1b.exe
+E:\GitHub\KBS-b1\KBS1b\KBS1b\bin\Debug\KBS1b.pdb
+E:\GitHub\KBS-b1\KBS1b\KBS1b\obj\Debug\KBS1b.csprojResolveAssemblyReference.cache
+E:\GitHub\KBS-b1\KBS1b\KBS1b\obj\Debug\KBS1b.Form1.resources
+E:\GitHub\KBS-b1\KBS1b\KBS1b\obj\Debug\KBS1b.Properties.Resources.resources
+E:\GitHub\KBS-b1\KBS1b\KBS1b\obj\Debug\KBS1b.csproj.GenerateResource.Cache
