@@ -122,6 +122,10 @@ namespace kbs1b
                         player.YPOS -= settings.Speed;
 
                     }
+                    else
+                    {
+                        player.YPOS = 0;
+                    }
 
                 }
                 if (player.left)
@@ -133,6 +137,10 @@ namespace kbs1b
                         player.XPOS -= settings.Speed;
 
                     }
+                    else
+                    {
+                        player.XPOS = 0;
+                    }
                 }
                 if (player.right)
                 {
@@ -143,6 +151,10 @@ namespace kbs1b
                         player.XPOS += settings.Speed;
 
                     }
+                    else
+                    {
+                        player.XPOS = xMax;
+                    }
                 }
                 if (player.down)
                 {
@@ -151,6 +163,10 @@ namespace kbs1b
                     {
                         player.YPOS += settings.Speed;
 
+                    }
+                    else
+                    {
+                        player.YPOS = yMax;
                     }
 
                 }
@@ -223,8 +239,17 @@ namespace kbs1b
             //check if finish is reached. if yes: stop the game.
             if (player1.XPOS >= 550 && player1.XPOS <= 600 && player1.YPOS >= 300 && player1.YPOS <=350) {
                 timer1.Stop();
-                MessageBox.Show(String.Format("WELL DONE, {0} Lives lost", count));
+                player1.XPOS = 555;
+                player1.YPOS = 325;
+                if (count == 1)
+                {
+                    MessageBox.Show(String.Format("WELL DONE, {0} Life lost", count));
 
+                }
+                else
+                {
+                    MessageBox.Show(String.Format("WELL DONE, {0} Lives lost", count));
+                }
             }
 
 
