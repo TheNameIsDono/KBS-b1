@@ -1,6 +1,0 @@
-C:\Users\Stijn_000\Documents\GitHub\KBS-b1\Hello World\Hello World\bin\Debug\Hello World.exe.config
-C:\Users\Stijn_000\Documents\GitHub\KBS-b1\Hello World\Hello World\bin\Debug\Hello World.exe
-C:\Users\Stijn_000\Documents\GitHub\KBS-b1\Hello World\Hello World\bin\Debug\Hello World.pdb
-C:\Users\Stijn_000\Documents\GitHub\KBS-b1\Hello World\Hello World\obj\Debug\Hello World.csprojResolveAssemblyReference.cache
-C:\Users\Stijn_000\Documents\GitHub\KBS-b1\Hello World\Hello World\obj\Debug\Hello World.exe
-C:\Users\Stijn_000\Documents\GitHub\KBS-b1\Hello World\Hello World\obj\Debug\Hello World.pdb
