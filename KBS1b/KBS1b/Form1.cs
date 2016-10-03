@@ -237,7 +237,7 @@ namespace kbs1b
                 timer1.Interval = 1;
             }
             //check if finish is reached. if yes: stop the game.
-            if (player1.XPOS >= 550 && player1.XPOS <= 600 && player1.YPOS >= 300 && player1.YPOS <=350) {
+            if (player1.XPOS >= 530 && player1.XPOS <= 600 && player1.YPOS >= 280 && player1.YPOS <=350) {
                 timer1.Stop();
                 player1.XPOS = 555;
                 player1.YPOS = 325;
@@ -291,7 +291,7 @@ namespace kbs1b
                 if (explode)
                 {
 
-                    e.Graphics.DrawImage(explosion, player1.XPOS, player1.YPOS);
+                    e.Graphics.DrawImage(explosion, player1.XPOS-32, player1.YPOS-32);
                     explode = false;
 
 
