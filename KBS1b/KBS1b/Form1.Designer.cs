@@ -49,6 +49,7 @@
             this.pbCanvas.start = ((System.Drawing.Image)(resources.GetObject("pbCanvas.start")));
             this.pbCanvas.TabIndex = 1;
             this.pbCanvas.TabStop = false;
+            this.pbCanvas.Click += new System.EventHandler(this.pbCanvas_Click);
             this.pbCanvas.Paint += new System.Windows.Forms.PaintEventHandler(this.pbCanvas_Paint);
             // 
             // Form1

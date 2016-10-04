@@ -16,3 +16,6 @@ C:\Users\Stijn_000\Documents\GitHub\KBS-b1\Field\kbs1b\kbs1b\obj\Debug\kbs1b.For
 C:\Users\Stijn_000\Documents\GitHub\KBS-b1\Field\kbs1b\kbs1b\obj\Debug\kbs1b.Properties.Resources.resources
 C:\Users\Stijn_000\Documents\GitHub\KBS-b1\Field\kbs1b\kbs1b\obj\Debug\kbs1b.csproj.GenerateResource.Cache
 C:\Users\Stijn_000\Documents\GitHub\KBS-b1\Field\kbs1b\kbs1b\obj\Debug\kbs1b.csprojResolveAssemblyReference.cache
+E:\GitHub\KBS-b1\Field\kbs1b\kbs1b\bin\Debug\kbs1b.exe.config
+E:\GitHub\KBS-b1\Field\kbs1b\kbs1b\obj\Debug\kbs1b.exe
+E:\GitHub\KBS-b1\Field\kbs1b\kbs1b\obj\Debug\kbs1b.pdb

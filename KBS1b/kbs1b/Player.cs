@@ -44,8 +44,8 @@ namespace kbs1b
 
         public Player(Input input)
         {
-            xPos = 15;
-            yPos = 50;
+            xPos = 45;
+            yPos = 90;
            
             this.input = input;
             up = down = left = right = false;

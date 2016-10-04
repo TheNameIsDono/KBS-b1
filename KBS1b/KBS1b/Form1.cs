@@ -19,6 +19,10 @@ namespace kbs1b
         bool explode = false;
         bool richtingDown = true;
         Image explosion = Properties.Resources.explosion;
+        Image bush = Properties.Resources.Bush;
+        Image bushver = Properties.Resources.Bushvertical;
+        Image bushverext = Properties.Resources.Bushverext;
+        Image bushext = Properties.Resources.Bushext;
         Input input = new Input('W', 'A', 'S', 'D');
         Settings settings = new Settings();
         Player player1;
@@ -26,6 +30,11 @@ namespace kbs1b
         private List<Obstacle> obstacles = new List<Obstacle>();
         public Obstacle obstacle1, obstacle2,obstacle3, obstacle4, obstacle5, obstacle6;
         int xMax, yMax;
+
+        private void pbCanvas_Click(object sender, EventArgs e) {
+
+        }
+
         public Form1()
         {
             InitializeComponent();
@@ -39,7 +48,7 @@ namespace kbs1b
             obstacles.Add(obstacle3); obstacles.Add(obstacle4);
             obstacles.Add(obstacle5); obstacles.Add(obstacle6);
             player1 = new Player(input);
-            player1.COLOR = Color.Green;
+           // player1.COLOR = Color.Green;
             players.Add(player1);
             xMax = pbCanvas.Size.Width - 35;
             yMax = pbCanvas.Size.Height - 35;
@@ -211,7 +220,7 @@ namespace kbs1b
                         explode = true;
                         obstacles.Remove(obstacles[i]);
                         pbCanvas.Invalidate();
-                        timer1.Interval = 1000;
+                        timer1.Interval = 350;
                         count++;
                         return;
                         
@@ -237,18 +246,23 @@ namespace kbs1b
                 timer1.Interval = 1;
             }
             //check if finish is reached. if yes: stop the game.
-            if (player1.XPOS >= 530 && player1.XPOS <= 600 && player1.YPOS >= 280 && player1.YPOS <=350) {
+            if (player1.XPOS >= 530 && player1.XPOS <= 600 && player1.YPOS >= 240 && player1.YPOS <=310) {
                 timer1.Stop();
                 player1.XPOS = 555;
                 player1.YPOS = 325;
                 if (count == 1)
                 {
-                    MessageBox.Show(String.Format("WELL DONE, {0} Life lost", count));
+                    //MessageBox.Show(String.Format("WELL DONE, {0} Life lost", count));
+                    timer1.Interval = 100;
+                    this.Close();
+                    
 
                 }
                 else
                 {
-                    MessageBox.Show(String.Format("WELL DONE, {0} Lives lost", count));
+                    //MessageBox.Show(String.Format("WELL DONE, {0} Lives lost", count));
+                    timer1.Interval = 100;
+                    this.Close();
                 }
             }
 
@@ -260,8 +274,15 @@ namespace kbs1b
             base.OnPaint(e);
             {
                 //teken het start en finish punt op het speelveld
-                e.Graphics.DrawImage(pbCanvas.start, 0, 0);
-                e.Graphics.DrawImage(pbCanvas.finish, 550, 300);
+                e.Graphics.DrawImage(pbCanvas.start, 40, 40);
+                e.Graphics.DrawImage(pbCanvas.finish, 570, 270);
+                e.Graphics.DrawImage(bushext, 0, 0);
+                e.Graphics.DrawImage(bushext, 0, 340);
+                e.Graphics.DrawImage(bushverext, 630, 0);
+                e.Graphics.DrawImage(bushverext, 0, 0);
+
+                //e.Graphics.DrawImage(bushver, 160, 70);
+                //e.Graphics.DrawImage(bushver, 360, 180);
 
                 //teken de speler op het veld
                 foreach (Player player in players)
@@ -274,6 +295,20 @@ namespace kbs1b
                     //Pen pen = new Pen(player.COLOR, 10);
                     e.Graphics.DrawImage(img, point);
 
+                    if (player1.XPOS < 30 || player1.XPOS > 600) {
+                        player1.XPOS = 45;
+                        player1.YPOS = 90;
+                    }
+
+                    if (player1.YPOS < 35 || player1.YPOS > 310) {
+                        player1.XPOS = 45;
+                        player1.YPOS = 90;
+                    }
+
+                    //if (player1.XPOS > 130 && player1.XPOS < 175 && player1.YPOS > 65 && player1.YPOS < 190) {
+                    //    player1.XPOS = 45;
+                    //    player1.YPOS = 90;
+                    //}
 
 
                 }
