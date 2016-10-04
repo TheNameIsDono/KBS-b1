@@ -28,7 +28,9 @@ namespace kbs1b
         Player player1;
         private List<Player> players = new List<Player>();
         private List<Obstacle> obstacles = new List<Obstacle>();
-        public Obstacle obstacle1, obstacle2,obstacle3, obstacle4, obstacle5, obstacle6;
+        private List<ObstacleS> obstaclesS = new List<ObstacleS>();
+        public ObstacleS obstacle7, obstacle8;
+        public Obstacle obstacle1, obstacle2, obstacle3, obstacle4, obstacle5, obstacle6;
         int xMax, yMax;
 
         private void pbCanvas_Click(object sender, EventArgs e) {
@@ -47,6 +49,11 @@ namespace kbs1b
             obstacles.Add(obstacle1); obstacles.Add(obstacle2);
             obstacles.Add(obstacle3); obstacles.Add(obstacle4);
             obstacles.Add(obstacle5); obstacles.Add(obstacle6);
+
+            obstacle7 = new ObstacleS(162, 90, 25, 125);
+            obstacle8 = new ObstacleS(360, 160, 25, 125);
+            obstaclesS.Add(obstacle7); obstaclesS.Add(obstacle8);
+
             player1 = new Player(input);
            // player1.COLOR = Color.Green;
             players.Add(player1);
@@ -184,7 +191,26 @@ namespace kbs1b
             }
 
 
-
+            if (obstaclesS.Any())
+            {
+                for (int i = obstaclesS.Count - 1; i >= 0; i--)
+                {
+                    //Check for collision with non-moving obstaclesS.
+                    if ((player1.XPOS + 35) >= obstaclesS[i].XPOS && (player1.XPOS) <= (obstaclesS[i].XPOS + obstaclesS[i].Width + 1) &&
+                    (player1.YPOS + 35) >= obstaclesS[i].YPOS && (player1.YPOS) <= obstaclesS[i].YPOS + obstaclesS[i].Height + 1
+                    ||
+                    ((obstaclesS[i].XPOS + obstaclesS[i].Width + 1) >= player1.XPOS && (obstaclesS[i].XPOS) <= (player1.XPOS + 35)
+                    && (obstaclesS[i].YPOS + obstaclesS[i].Height + 1) >= player1.YPOS && (obstaclesS[i].YPOS) <= player1.YPOS + 35))
+                    {
+                        pbCanvas.Invalidate();
+                        timer1.Interval = 350;
+                        player1.XPOS = 45;
+                        player1.YPOS = 90;
+                        return;
+                    }
+                }
+            }
+            
 
             if (obstacles.Any())
             {
@@ -210,7 +236,7 @@ namespace kbs1b
 
                     }
                    
-                   //check for collision
+                   //check for collision with moving obstacles                                
                     if ((player1.XPOS + 35) >= obstacles[i].XPOS && (player1.XPOS) <= (obstacles[i].XPOS + obstacles[i].Size + 10) &&
                         (player1.YPOS + 35) >= obstacles[i].YPOS && (player1.YPOS) <= obstacles[i].YPOS + obstacles[i].Size + 10
                         ||
@@ -316,11 +342,27 @@ namespace kbs1b
                 //teken de obstacles op het veld.
                 foreach (Obstacle ob in obstacles)
                 {
-                    Rectangle rect1 = new Rectangle(ob.XPOS, ob.YPOS, ob.Size, ob.Size);
-                    Color color = Color.FromArgb(255, 255, 0, 0);
-                    Pen pen1 = new Pen(color, 10);
-                    e.Graphics.DrawRectangle(pen1, rect1);
+                    Image spikes = Properties.Resources.Spike;
+                    PointF point2 = new PointF(ob.XPOS - 12, ob.YPOS - 12);
+                    //Rectangle rect1 = new Rectangle(ob.XPOS, ob.YPOS, ob.Size, ob.Size);
+                    //Color color = Color.FromArgb(255, 255, 0, 0);
+                    //Pen pen1 = new Pen(color, 10);
+                    //e.Graphics.DrawRectangle(pen1, rect1);
+                    e.Graphics.DrawImage(spikes, point2);
                 }
+
+                //tekent de obstaclesS op het veld
+                foreach (ObstacleS obs in obstaclesS)
+                {
+                    Image wall = Properties.Resources.Bushvertical;
+                    PointF point3 = new PointF(obs.XPOS - 2, obs.YPOS - 5);
+                    //Rectangle rect2 = new Rectangle(obs.XPOS, obs.YPOS, obs.Width, obs.Height);
+                    //Color color = Color.FromArgb(255, 255, 0, 0);
+                    //Pen pen1 = new Pen(color, 10);
+                    //e.Graphics.DrawRectangle(pen1, rect2);
+                    e.Graphics.DrawImage(wall, point3);
+                }
+                
 
                 //als een obstacle is geraakt, toon dan explosie.
                 if (explode)

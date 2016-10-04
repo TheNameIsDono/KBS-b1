@@ -55,6 +55,7 @@
     </Compile>
     <Compile Include="Input.cs" />
     <Compile Include="Obstacle.cs" />
+    <Compile Include="ObstacleS.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -111,6 +112,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Bushvertical.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Spikes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Spike.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
