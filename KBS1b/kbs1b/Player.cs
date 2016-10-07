@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace kbs1b
 {
-    class Player
+    public class Player
     {
 
 

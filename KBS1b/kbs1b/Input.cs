@@ -9,7 +9,7 @@ using System.Windows.Forms;
 namespace kbs1b
 {
     
-    class Input
+    public class Input
     {
 
         
