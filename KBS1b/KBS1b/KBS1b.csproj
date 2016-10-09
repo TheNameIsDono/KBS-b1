@@ -62,6 +62,12 @@
     <Compile Include="Input.cs" />
     <Compile Include="Obstacle.cs" />
     <Compile Include="ObstacleS.cs" />
+    <Compile Include="PauzeMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PauzeMenu.Designer.cs">
+      <DependentUpon>PauzeMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -74,6 +80,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HoofdMenu.resx">
       <DependentUpon>HoofdMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PauzeMenu.resx">
+      <DependentUpon>PauzeMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

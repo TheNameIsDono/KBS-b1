@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using System.IO;
 
 
+
 namespace kbs1b
 {
     public partial class Form1 : Form
@@ -23,7 +24,7 @@ namespace kbs1b
         Image bushver = Properties.Resources.Bushvertical;
         Image bushverext = Properties.Resources.Bushverext;
         Image bushext = Properties.Resources.Bushext;
-        Input input = new Input('W', 'A', 'S', 'D');
+        Input input = new Input('W', 'A', 'S', 'D', 'P');
         Settings settings = new Settings();
         Player player1;
         private List<Player> players = new List<Player>();
@@ -32,6 +33,9 @@ namespace kbs1b
         public ObstacleS obstacle7, obstacle8;
         public Obstacle obstacle1, obstacle2, obstacle3, obstacle4, obstacle5, obstacle6;
         int xMax, yMax;
+        PauzeMenu p = new PauzeMenu();
+       
+
 
         private void pbCanvas_Click(object sender, EventArgs e) {
 
@@ -40,7 +44,7 @@ namespace kbs1b
         public Form1()
         {
             InitializeComponent();
-            //
+            
             obstacle1 = new Obstacle(4, 100, 150, 50, 1);
             obstacle2 = new Obstacle(2, 200, 70, 50, 2);
             obstacle3 = new Obstacle(4, 300, 150, 50, 1);
@@ -96,7 +100,18 @@ namespace kbs1b
                     return;
 
                 }
+                if (e.KeyValue == player.input.ESC) {
+                    player.esc = true;
+                    p.setLevelPause(true);
+                    if (p.getLevelPause() == true) {
+                       p.ShowDialog();
+                        player.esc = false;
+                    }
+
+                }
+               
             }
+            
         }
         private void Form1_KeyUp(object sender, KeyEventArgs e)
         {
@@ -125,10 +140,19 @@ namespace kbs1b
                     player.right = false;
 
                 }
+                if (e.KeyValue == player.input.ESC) {
+                    player.esc = false;
+                    
+                }
             }
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
+            if (p.getLevelExit()) {
+
+                this.Close();
+            }
+            //while (p.getLevelPause() == true) { Thread.Sleep(0); }
             foreach (Player player in players)
             {
                 if (player.up)
@@ -187,11 +211,15 @@ namespace kbs1b
                     }
 
                 }
+                if (player.esc) {
+
+                }
+                
                 pbCanvas.Invalidate();
                 
+                
             }
-
-
+           
             if (obstaclesS.Any())
             {
                 for (int i = obstaclesS.Count - 1; i >= 0; i--)
@@ -276,8 +304,8 @@ namespace kbs1b
                     this.Close();
                 }
             }
-
-
+            
+            
 
         }
         public void pbCanvas_Paint(object sender, PaintEventArgs e)

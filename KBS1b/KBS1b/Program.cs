@@ -18,12 +18,14 @@ namespace kbs1b
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             HoofdMenu hMenu = new HoofdMenu();
+            PauzeMenu pMenu = new PauzeMenu();
             Application.Run(hMenu); 
             if(hMenu.getSpelGestart())
             {
                 Application.Run(new Form1());
             }
             if (hMenu.getExitGeklikt()) { x = 1; }
+
             while(x < 1)
             {
                 HoofdMenu hoMenu = new HoofdMenu();
@@ -31,6 +33,7 @@ namespace kbs1b
                 if (hoMenu.getSpelGestart())
                 {
                     Application.Run(new Form1());
+                    
                 }
                 if(hoMenu.getExitGeklikt()) { x = 1; }
             }

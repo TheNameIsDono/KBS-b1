@@ -17,16 +17,18 @@ namespace kbs1b
         public int Left { get; set; }
         public int Down { get; set; }
         public int Right { get; set; }
+        public int ESC { get; set; }
 
         
 
-        public Input(char up, char left, char down, char right)
+        public Input(char up, char left, char down, char right, char esc)
         {
 
             this.Up = Convert.ToInt32(up);
             this.Left = Convert.ToInt32(left); 
             this.Down = Convert.ToInt32(down);
             this.Right = Convert.ToInt32(right);
+            this.ESC = Convert.ToInt32(esc);
             Console.WriteLine(Up + "\n" + Left + "\n" + Down + "\n" + Right);
 
         }

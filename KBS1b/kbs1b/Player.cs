@@ -26,6 +26,7 @@ namespace kbs1b
         public bool left { set; get; }
         public bool down { set; get; }
         public bool right { set; get; }
+        public bool esc { set; get; }
 
         public int YPOS
         {
@@ -48,7 +49,7 @@ namespace kbs1b
             yPos = 90;
            
             this.input = input;
-            up = down = left = right = false;
+            up = down = left = right = esc = false;
         }
 
 
