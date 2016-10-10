@@ -67,7 +67,7 @@ namespace kbs1b
             yMax = pbCanvas.Size.Height - 35;
             timer1.Start();
             
-            timer2.Start();
+            //timer2.Start();
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
@@ -106,7 +106,10 @@ namespace kbs1b
                 if (e.KeyValue == player.input.ESC) {
                     player.esc = true;
                     p.setLevelPause(true);
-                    
+                    if (p.getLevelPause() == true) {
+                        p.ShowDialog();
+                        player.esc = false;
+                    }
 
                 }
                
@@ -148,8 +151,10 @@ namespace kbs1b
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
-            
-            while (p.getLevelPause() == true) { Thread.Sleep(0); }
+            if (p.getLevelExit()) {
+                this.Close();
+            }
+            // while (p.getLevelPause() == true) { Thread.Sleep(0); }
             foreach (Player player in players)
             {
                 if (player.up)
@@ -306,13 +311,8 @@ namespace kbs1b
 
         }
         private void timer2_Tick() {
-            if (p.getLevelPause() == true) {
-                p.ShowDialog();
-                player.esc = false;
-            }
-            //if (p.getLevelExit()) {
-            //    this.Close();
-            //}
+            
+           
 
         }
         public void pbCanvas_Paint(object sender, PaintEventArgs e)
