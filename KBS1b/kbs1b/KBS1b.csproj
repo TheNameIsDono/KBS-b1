@@ -60,6 +60,7 @@
       <DependentUpon>HoofdMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Input.cs" />
+    <Compile Include="Level.cs" />
     <Compile Include="Obstacle.cs" />
     <Compile Include="ObstacleS.cs" />
     <Compile Include="PauzeMenu.cs">
