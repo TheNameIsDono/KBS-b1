@@ -86,6 +86,7 @@
             this.Controls.Add(this.ControlsButton);
             this.Controls.Add(this.StartButton);
             this.Name = "HoofdMenu";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HoofdMenu";
             this.Load += new System.EventHandler(this.HoofdMenu_Load);
