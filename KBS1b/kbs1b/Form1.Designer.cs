@@ -55,6 +55,7 @@
             // Form1
             // 
             this.ClientSize = new System.Drawing.Size(794, 407);
+            this.ControlBox = false;
             this.Controls.Add(this.pbCanvas);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
