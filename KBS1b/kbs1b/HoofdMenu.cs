@@ -38,8 +38,17 @@ namespace kbs1b
 
         private void ControllsButton_Click(object sender, EventArgs e)
         {
-            if(GekozenControls == 0) { GekozenControls = 1; }
-            else if(GekozenControls == 1) { GekozenControls = 0; }
+            if(GekozenControls == 0)
+            {
+                GekozenControls = 1;
+                MessageBox.Show(String.Format("Je controls zijn nu de pijltjestoetsen"));
+
+            }
+            else if(GekozenControls == 1)
+            {
+                GekozenControls = 0;
+                MessageBox.Show(String.Format("Je controls zijn nu W A S D"));
+            }
         }
 
         private void ExitButton_Click(object sender, EventArgs e)
