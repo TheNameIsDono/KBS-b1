@@ -13,14 +13,12 @@ namespace kbs1b
     public partial class HoofdMenu : Form
     {
         private bool SpelGestart = false;
-        private bool ControllsGeklikt = false;
         private bool ExitGeklikt = false;
         public HoofdMenu()
         {
             InitializeComponent();
         }
 
-        public bool getControllsGeklikt() { return ControllsGeklikt; }
         public bool getSpelGestart() { return SpelGestart; }
         public bool getExitGeklikt() { return ExitGeklikt; }
 
@@ -37,8 +35,7 @@ namespace kbs1b
 
         private void ControllsButton_Click(object sender, EventArgs e)
         {
-            ControllsGeklikt = true;
-            this.Close();
+
         }
 
         private void ExitButton_Click(object sender, EventArgs e)

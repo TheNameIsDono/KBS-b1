@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.StartButton = new System.Windows.Forms.Button();
-            this.ControllsButton = new System.Windows.Forms.Button();
+            this.ControlsButton = new System.Windows.Forms.Button();
             this.ExitButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -48,18 +48,18 @@
             this.StartButton.UseVisualStyleBackColor = false;
             this.StartButton.Click += new System.EventHandler(this.button1_Click);
             // 
-            // ControllsButton
+            // ControlsButton
             // 
-            this.ControllsButton.BackColor = System.Drawing.Color.Crimson;
-            this.ControllsButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ControllsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ControllsButton.Location = new System.Drawing.Point(90, 250);
-            this.ControllsButton.Name = "ControllsButton";
-            this.ControllsButton.Size = new System.Drawing.Size(300, 100);
-            this.ControllsButton.TabIndex = 1;
-            this.ControllsButton.Text = "Controlls";
-            this.ControllsButton.UseVisualStyleBackColor = false;
-            this.ControllsButton.Click += new System.EventHandler(this.ControllsButton_Click);
+            this.ControlsButton.BackColor = System.Drawing.Color.Crimson;
+            this.ControlsButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ControlsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ControlsButton.Location = new System.Drawing.Point(90, 250);
+            this.ControlsButton.Name = "ControlsButton";
+            this.ControlsButton.Size = new System.Drawing.Size(300, 100);
+            this.ControlsButton.TabIndex = 1;
+            this.ControlsButton.Text = "Controls";
+            this.ControlsButton.UseVisualStyleBackColor = false;
+            this.ControlsButton.Click += new System.EventHandler(this.ControllsButton_Click);
             // 
             // ExitButton
             // 
@@ -82,7 +82,7 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(482, 653);
             this.Controls.Add(this.ExitButton);
-            this.Controls.Add(this.ControllsButton);
+            this.Controls.Add(this.ControlsButton);
             this.Controls.Add(this.StartButton);
             this.Name = "HoofdMenu";
             this.Text = "HoofdMenu";
@@ -95,7 +95,7 @@
 
         private System.Windows.Forms.Button StartButton;
         internal static bool getSpelStarted;
-        private System.Windows.Forms.Button ControllsButton;
+        private System.Windows.Forms.Button ControlsButton;
         private System.Windows.Forms.Button ExitButton;
     }
 }

@@ -17,14 +17,6 @@ namespace kbs1b
             int x = 0;
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            HoofdMenu hMenu = new HoofdMenu();
-            PauzeMenu pMenu = new PauzeMenu();
-            Application.Run(hMenu); 
-            if(hMenu.getSpelGestart())
-            {
-                Application.Run(new Form1());
-            }
-            if (hMenu.getExitGeklikt()) { x = 1; }
 
             while(x < 1)
             {
