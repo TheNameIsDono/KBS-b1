@@ -45,3 +45,8 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+
+#Files changed by Visual Studio
+KBS1b/kbs1b/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+KBS1b/.vs/KBS1b/v14/.suo
+KBS1b/kbs1b/obj/Debug/KBS1b.csproj.FileListAbsolute.txt
