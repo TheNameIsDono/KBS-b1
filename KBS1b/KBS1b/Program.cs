@@ -14,9 +14,22 @@ namespace kbs1b
         [STAThread]
         static void Main()
         {
+            int x = 0;
+            int gekozenControls = 0;
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
-        }
+
+            while(x < 1)
+            {
+                HoofdMenu loopMenu = new HoofdMenu(gekozenControls);
+                Application.Run(loopMenu);
+                if (loopMenu.getSpelGestart())
+                {
+                    gekozenControls = loopMenu.getGekozenControls();
+                    Application.Run(new Form1(gekozenControls));                 
+                }
+                if(loopMenu.getExitGeklikt()) { x = 1; }
+            }
     }
+        }
 }

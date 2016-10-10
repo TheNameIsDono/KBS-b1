@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using System.IO;
 
 
+
 namespace kbs1b
 {
     public partial class Form1 : Form
@@ -23,7 +24,7 @@ namespace kbs1b
         Image bushver = Properties.Resources.Bushvertical;
         Image bushverext = Properties.Resources.Bushverext;
         Image bushext = Properties.Resources.Bushext;
-        Input input = new Input('W', 'A', 'S', 'D');
+        Input input;
         Settings settings = new Settings();
         Player player1;
         private List<Player> players = new List<Player>();
@@ -33,19 +34,35 @@ namespace kbs1b
         public Obstacle obstacle1, obstacle2, obstacle3, obstacle4, obstacle5, obstacle6;
         int xMax, yMax;
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        PauzeMenu p = new PauzeMenu();
+       
+
+
         private void pbCanvas_Click(object sender, EventArgs e) {
 
         }
 
-        public Form1()
+        public Form1(int C)
         {
             InitializeComponent();
-            obstacle1 = new Obstacle(5, 100, 100, 50);
-            obstacle2 = new Obstacle(2, 200, 100, 50);
-            obstacle3 = new Obstacle(5, 300, 100, 50);
-            obstacle4 = new Obstacle(2, 400, 100, 50);
-            obstacle5 = new Obstacle(5, 500, 100, 50);
-            obstacle6 = new Obstacle(2, 600, 100, 50);
+            if (C == 0)
+            {
+                input = new Input('W', 'A', 'S', 'D', 27);
+            } else if(C == 1)
+            {
+                input = new Input(38, 37, 40, 39, 27);
+            }
+            obstacle1 = new Obstacle(4, 100, 150, 50, 1);
+            obstacle2 = new Obstacle(2, 200, 70, 50, 2);
+            obstacle3 = new Obstacle(4, 300, 150, 50, 1);
+            obstacle4 = new Obstacle(2, 400, 100, 50, 3);
+            obstacle5 = new Obstacle(4, 500, 200, 50, 2);
+            obstacle6 = new Obstacle(2, 600, 100, 50, 1);
             obstacles.Add(obstacle1); obstacles.Add(obstacle2);
             obstacles.Add(obstacle3); obstacles.Add(obstacle4);
             obstacles.Add(obstacle5); obstacles.Add(obstacle6);
@@ -95,7 +112,18 @@ namespace kbs1b
                     return;
 
                 }
+                if (e.KeyValue == player.input.ESC) {
+                    player.esc = true;
+                    p.setLevelPause(true);
+                    if (p.getLevelPause() == true) {
+                       p.ShowDialog();
+                        player.esc = false;
+                    }
+
+                }
+               
             }
+            
         }
         private void Form1_KeyUp(object sender, KeyEventArgs e)
         {
@@ -124,10 +152,19 @@ namespace kbs1b
                     player.right = false;
 
                 }
+                if (e.KeyValue == player.input.ESC) {
+                    player.esc = false;
+                    
+                }
             }
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
+            if (p.getLevelExit()) {
+
+                this.Close();
+            }
+            //while (p.getLevelPause() == true) { Thread.Sleep(0); }
             foreach (Player player in players)
             {
                 if (player.up)
@@ -186,11 +223,15 @@ namespace kbs1b
                     }
 
                 }
+                if (player.esc) {
+
+                }
+                
                 pbCanvas.Invalidate();
                 
+                
             }
-
-
+           
             if (obstaclesS.Any())
             {
                 for (int i = obstaclesS.Count - 1; i >= 0; i--)
@@ -216,25 +257,9 @@ namespace kbs1b
             {
                 for (int i = obstacles.Count - 1; i >= 0; i--)
                 {
-                    //obstacles op en neer laten bewegen, 
-                    //switchen zodra de maximale hoogte door een blok is bereikt
-                    if (obstacles[i].YPOS <= pbCanvas.Size.Height - 50 && richtingDown) 
-                    {
-                        obstacles[i].YPOS += obstacles[i].Speed;
-                    }
-                    else {
-                        richtingDown = false;
-                    }
-
-                    if (obstacles[i].YPOS >= 0 && !richtingDown)
-                    {
-                        obstacles[i].YPOS -= obstacles[i].Speed;
-
-                    }
-                    else {
-                        richtingDown = true;
-
-                    }
+                    //Call to move() method on each obstacle in the obstacle[] List
+                    //Also give a reference to the required variables
+                    obstacles[i].move(ref yMax, ref xMax, ref richtingDown, ref player1);
                    
                    //check for collision with moving obstacles                                
                     if ((player1.XPOS + 35) >= obstacles[i].XPOS && (player1.XPOS) <= (obstacles[i].XPOS + obstacles[i].Size + 10) &&
@@ -291,8 +316,8 @@ namespace kbs1b
                     this.Close();
                 }
             }
-
-
+            
+            
 
         }
         public void pbCanvas_Paint(object sender, PaintEventArgs e)
@@ -343,7 +368,7 @@ namespace kbs1b
                 foreach (Obstacle ob in obstacles)
                 {
                     Image spikes = Properties.Resources.Spike;
-                    PointF point2 = new PointF(ob.XPOS - 12, ob.YPOS - 12);
+                    PointF point2 = new PointF((float)ob.XPOS - 12, (float)ob.YPOS - 12);
                     //Rectangle rect1 = new Rectangle(ob.XPOS, ob.YPOS, ob.Size, ob.Size);
                     //Color color = Color.FromArgb(255, 255, 0, 0);
                     //Pen pen1 = new Pen(color, 10);
@@ -355,7 +380,7 @@ namespace kbs1b
                 foreach (ObstacleS obs in obstaclesS)
                 {
                     Image wall = Properties.Resources.Bushvertical;
-                    PointF point3 = new PointF(obs.XPOS - 2, obs.YPOS - 5);
+                    PointF point3 = new PointF((float)obs.XPOS - 2, (float)obs.YPOS - 5);
                     //Rectangle rect2 = new Rectangle(obs.XPOS, obs.YPOS, obs.Width, obs.Height);
                     //Color color = Color.FromArgb(255, 255, 0, 0);
                     //Pen pen1 = new Pen(color, 10);

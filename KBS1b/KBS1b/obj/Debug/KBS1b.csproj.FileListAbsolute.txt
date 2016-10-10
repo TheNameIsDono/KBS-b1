@@ -52,6 +52,7 @@ E:\GitHub\KBS-b1\KBS1b\kbs1b\obj\Debug\kbs1b.csprojResolveAssemblyReference.cach
 E:\GitHub\KBS-b1\KBS1b\kbs1b\obj\Debug\kbs1b.Form1.resources
 E:\GitHub\KBS-b1\KBS1b\kbs1b\obj\Debug\kbs1b.Properties.Resources.resources
 E:\GitHub\KBS-b1\KBS1b\kbs1b\obj\Debug\kbs1b.csproj.GenerateResource.Cache
+<<<<<<< HEAD
 C:\Users\coenv\Documents\GitHub\KBS-b1\KBS1b\kbs1b\bin\Debug\kbs1b.exe.config
 C:\Users\coenv\Documents\GitHub\KBS-b1\KBS1b\kbs1b\obj\Debug\kbs1b.exe
 C:\Users\coenv\Documents\GitHub\KBS-b1\KBS1b\kbs1b\obj\Debug\kbs1b.pdb
@@ -61,3 +62,9 @@ C:\Users\coenv\Documents\GitHub\KBS-b1\KBS1b\kbs1b\obj\Debug\kbs1b.csprojResolve
 C:\Users\coenv\Documents\GitHub\KBS-b1\KBS1b\kbs1b\obj\Debug\kbs1b.Form1.resources
 C:\Users\coenv\Documents\GitHub\KBS-b1\KBS1b\kbs1b\obj\Debug\kbs1b.Properties.Resources.resources
 C:\Users\coenv\Documents\GitHub\KBS-b1\KBS1b\kbs1b\obj\Debug\kbs1b.csproj.GenerateResource.Cache
+=======
+C:\Users\Tim\Desktop\KBS-b1\KBS1b\kbs1b\obj\Debug\kbs1b.HoofdMenu.resources
+E:\GitHub\KBS-b1\KBS1b\kbs1b\obj\Debug\kbs1b.HoofdMenu.resources
+E:\GitHub\KBS-b1\KBS1b\kbs1b\obj\Debug\kbs1b.PauzeMenu.resources
+C:\Users\Tim\Desktop\KBS-b1\KBS1b\kbs1b\obj\Debug\kbs1b.PauzeMenu.resources
+>>>>>>> origin/master
