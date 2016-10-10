@@ -21,7 +21,7 @@ namespace kbs1b
         {
             get { return obstacles; }
         }
-        
+
         public void addObstacle(Obstacle obstacle)
         {
             obstacles.Add(obstacle);
