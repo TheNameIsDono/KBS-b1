@@ -14,13 +14,16 @@ namespace kbs1b
     {
         private bool SpelGestart = false;
         private bool ExitGeklikt = false;
-        public HoofdMenu()
+        private int GekozenControls;
+        public HoofdMenu(int C)
         {
             InitializeComponent();
+            GekozenControls = C;
         }
 
         public bool getSpelGestart() { return SpelGestart; }
         public bool getExitGeklikt() { return ExitGeklikt; }
+        public int getGekozenControls() { return GekozenControls; }
 
         private void HoofdMenu_Load(object sender, EventArgs e)
         {
@@ -35,7 +38,8 @@ namespace kbs1b
 
         private void ControllsButton_Click(object sender, EventArgs e)
         {
-
+            if(GekozenControls == 0) { GekozenControls = 1; }
+            else if(GekozenControls == 1) { GekozenControls = 0; }
         }
 
         private void ExitButton_Click(object sender, EventArgs e)

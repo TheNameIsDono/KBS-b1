@@ -24,7 +24,7 @@ namespace kbs1b
         Image bushver = Properties.Resources.Bushvertical;
         Image bushverext = Properties.Resources.Bushverext;
         Image bushext = Properties.Resources.Bushext;
-        Input input = new Input('W', 'A', 'S', 'D', 'P');
+        Input input;
         Settings settings = new Settings();
         Player player1;
         private List<Player> players = new List<Player>();
@@ -33,6 +33,12 @@ namespace kbs1b
         public ObstacleS obstacle7, obstacle8;
         public Obstacle obstacle1, obstacle2, obstacle3, obstacle4, obstacle5, obstacle6;
         int xMax, yMax;
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
         PauzeMenu p = new PauzeMenu();
        
 
@@ -41,10 +47,16 @@ namespace kbs1b
 
         }
 
-        public Form1()
+        public Form1(int C)
         {
             InitializeComponent();
-            
+            if (C == 0)
+            {
+                input = new Input('W', 'A', 'S', 'D', 27);
+            } else if(C == 1)
+            {
+                input = new Input(38, 37, 40, 39, 27);
+            }
             obstacle1 = new Obstacle(4, 100, 150, 50, 1);
             obstacle2 = new Obstacle(2, 200, 70, 50, 2);
             obstacle3 = new Obstacle(4, 300, 150, 50, 1);

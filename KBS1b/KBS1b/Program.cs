@@ -15,19 +15,20 @@ namespace kbs1b
         static void Main()
         {
             int x = 0;
+            int gekozenControls = 0;
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
             while(x < 1)
             {
-                HoofdMenu hoMenu = new HoofdMenu();
-                Application.Run(hoMenu);
-                if (hoMenu.getSpelGestart())
+                HoofdMenu loopMenu = new HoofdMenu(gekozenControls);
+                Application.Run(loopMenu);
+                if (loopMenu.getSpelGestart())
                 {
-                    Application.Run(new Form1());
-                    
+                    gekozenControls = loopMenu.getGekozenControls();
+                    Application.Run(new Form1(gekozenControls));                 
                 }
-                if(hoMenu.getExitGeklikt()) { x = 1; }
+                if(loopMenu.getExitGeklikt()) { x = 1; }
             }
     }
         }
