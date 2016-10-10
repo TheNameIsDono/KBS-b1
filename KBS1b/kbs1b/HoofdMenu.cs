@@ -13,16 +13,17 @@ namespace kbs1b
     public partial class HoofdMenu : Form
     {
         private bool SpelGestart = false;
-        private bool ControllsGeklikt = false;
         private bool ExitGeklikt = false;
-        public HoofdMenu()
+        public int GekozenControls;
+        public HoofdMenu(int C)
         {
             InitializeComponent();
+            GekozenControls = C;
         }
 
-        public bool getControllsGeklikt() { return ControllsGeklikt; }
         public bool getSpelGestart() { return SpelGestart; }
         public bool getExitGeklikt() { return ExitGeklikt; }
+        public int getGekozenControls() { return GekozenControls; }
 
         private void HoofdMenu_Load(object sender, EventArgs e)
         {
@@ -37,8 +38,8 @@ namespace kbs1b
 
         private void ControllsButton_Click(object sender, EventArgs e)
         {
-            ControllsGeklikt = true;
-            this.Close();
+            if(GekozenControls == 0) { GekozenControls = 1; }
+            else if(GekozenControls == 1) { GekozenControls = 0; }
         }
 
         private void ExitButton_Click(object sender, EventArgs e)
