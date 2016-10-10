@@ -40,9 +40,9 @@
             this.StartButton.FlatAppearance.BorderColor = System.Drawing.Color.Green;
             this.StartButton.FlatAppearance.BorderSize = 0;
             this.StartButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StartButton.Location = new System.Drawing.Point(90, 100);
+            this.StartButton.Location = new System.Drawing.Point(55, 63);
             this.StartButton.Name = "StartButton";
-            this.StartButton.Size = new System.Drawing.Size(300, 100);
+            this.StartButton.Size = new System.Drawing.Size(250, 370);
             this.StartButton.TabIndex = 0;
             this.StartButton.Text = "Start";
             this.StartButton.UseVisualStyleBackColor = false;
@@ -52,12 +52,12 @@
             // 
             this.ControlsButton.BackColor = System.Drawing.Color.Crimson;
             this.ControlsButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ControlsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ControlsButton.Location = new System.Drawing.Point(90, 250);
+            this.ControlsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ControlsButton.Location = new System.Drawing.Point(395, 63);
             this.ControlsButton.Name = "ControlsButton";
-            this.ControlsButton.Size = new System.Drawing.Size(300, 100);
+            this.ControlsButton.Size = new System.Drawing.Size(250, 370);
             this.ControlsButton.TabIndex = 1;
-            this.ControlsButton.Text = "Controls";
+            this.ControlsButton.Text = "Wissel Controls";
             this.ControlsButton.UseVisualStyleBackColor = false;
             this.ControlsButton.Click += new System.EventHandler(this.ControllsButton_Click);
             // 
@@ -67,9 +67,9 @@
             this.ExitButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ExitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ExitButton.ForeColor = System.Drawing.Color.Black;
-            this.ExitButton.Location = new System.Drawing.Point(90, 400);
+            this.ExitButton.Location = new System.Drawing.Point(735, 63);
             this.ExitButton.Name = "ExitButton";
-            this.ExitButton.Size = new System.Drawing.Size(300, 100);
+            this.ExitButton.Size = new System.Drawing.Size(250, 370);
             this.ExitButton.TabIndex = 2;
             this.ExitButton.Text = "Afsluiten";
             this.ExitButton.UseVisualStyleBackColor = false;
@@ -80,12 +80,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(482, 653);
+            this.ClientSize = new System.Drawing.Size(1034, 507);
             this.ControlBox = false;
             this.Controls.Add(this.ExitButton);
             this.Controls.Add(this.ControlsButton);
             this.Controls.Add(this.StartButton);
             this.Name = "HoofdMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HoofdMenu";
             this.Load += new System.EventHandler(this.HoofdMenu_Load);
             this.ResumeLayout(false);
@@ -95,7 +96,6 @@
         #endregion
 
         private System.Windows.Forms.Button StartButton;
-        internal static bool getSpelStarted;
         private System.Windows.Forms.Button ControlsButton;
         private System.Windows.Forms.Button ExitButton;
     }
