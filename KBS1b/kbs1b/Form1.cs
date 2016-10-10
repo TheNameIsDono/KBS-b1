@@ -34,12 +34,14 @@ namespace kbs1b
         public Obstacle obstacle1, obstacle2, obstacle3, obstacle4, obstacle5, obstacle6;
         int xMax, yMax;
         PauzeMenu p = new PauzeMenu();
-        private System.Windows.Forms.Timer timer2;
+       
 
         private void Form1_Load(object sender, EventArgs e)
         {
 
         }
+
+       
 
         private void pbCanvas_Click(object sender, EventArgs e) {
 
@@ -76,9 +78,12 @@ namespace kbs1b
             players.Add(player1);
             xMax = pbCanvas.Size.Width - 35;
             yMax = pbCanvas.Size.Height - 35;
+            timer1.Enabled = true;
             timer1.Start();
+            timer3.Enabled = true;
+            timer3.Start();
             
-            //timer2.Start();
+            
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
@@ -117,11 +122,7 @@ namespace kbs1b
                 if (e.KeyValue == player.input.ESC) {
                     player.esc = true;
                     p.setLevelPause(true);
-                    if (p.getLevelPause() == true) {
-                        p.ShowDialog();
-                        player.esc = false;
-                    }
-
+                    
                 }
                
             }
@@ -160,12 +161,21 @@ namespace kbs1b
                 }
             }
         }
+        private void timer3_Tick(object sender, EventArgs e) {
+            if (p.getLevelPause() == true) {
+                p.setLevelPause(false);
+                timer1.Stop();                
+                p.ShowDialog();
+                timer1.Start();
+            }
+            
+        }
         private void timer1_Tick(object sender, EventArgs e)
         {
             if (p.getLevelExit()) {
                 this.Close();
             }
-            // while (p.getLevelPause() == true) { Thread.Sleep(0); }
+
             foreach (Player player in players)
             {
                 if (player.up)
@@ -319,11 +329,6 @@ namespace kbs1b
             }
             
             
-
-        }
-        private void timer2_Tick() {
-            
-           
 
         }
         public void pbCanvas_Paint(object sender, PaintEventArgs e)

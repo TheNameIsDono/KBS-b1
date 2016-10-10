@@ -30,6 +30,7 @@
             // 
             // BtnQuit
             // 
+            this.BtnQuit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnQuit.Location = new System.Drawing.Point(52, 139);
             this.BtnQuit.Name = "BtnQuit";
             this.BtnQuit.Size = new System.Drawing.Size(75, 23);
@@ -40,6 +41,7 @@
             // 
             // BtnResume
             // 
+            this.BtnResume.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnResume.Location = new System.Drawing.Point(52, 40);
             this.BtnResume.Name = "BtnResume";
             this.BtnResume.Size = new System.Drawing.Size(75, 23);
@@ -50,6 +52,7 @@
             // 
             // BtnSave
             // 
+            this.BtnSave.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnSave.Location = new System.Drawing.Point(52, 89);
             this.BtnSave.Name = "BtnSave";
             this.BtnSave.Size = new System.Drawing.Size(75, 23);
@@ -62,15 +65,17 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.WindowText;
             this.ClientSize = new System.Drawing.Size(182, 199);
             this.Controls.Add(this.BtnSave);
             this.Controls.Add(this.BtnResume);
             this.Controls.Add(this.BtnQuit);
-            this.Cursor = System.Windows.Forms.Cursors.UpArrow;
+            this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "PauzeMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "PauseMenu";
             this.Load += new System.EventHandler(this.PauzeMenu_Load);
             this.ResumeLayout(false);
