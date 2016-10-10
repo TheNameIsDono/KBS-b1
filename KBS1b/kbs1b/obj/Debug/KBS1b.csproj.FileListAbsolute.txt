@@ -56,3 +56,5 @@ C:\Users\Tim\Desktop\KBS-b1\KBS1b\kbs1b\obj\Debug\kbs1b.HoofdMenu.resources
 E:\GitHub\KBS-b1\KBS1b\kbs1b\obj\Debug\kbs1b.HoofdMenu.resources
 E:\GitHub\KBS-b1\KBS1b\kbs1b\obj\Debug\kbs1b.PauzeMenu.resources
 C:\Users\Tim\Desktop\KBS-b1\KBS1b\kbs1b\obj\Debug\kbs1b.PauzeMenu.resources
+C:\Users\Fatah Fattah\Documents\GitHub\KBS-b1\KBS1b\kbs1b\obj\Debug\kbs1b.HoofdMenu.resources
+C:\Users\Fatah Fattah\Documents\GitHub\KBS-b1\KBS1b\kbs1b\obj\Debug\kbs1b.PauzeMenu.resources

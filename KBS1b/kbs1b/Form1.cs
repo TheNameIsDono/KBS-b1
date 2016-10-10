@@ -57,12 +57,12 @@ namespace kbs1b
                 input = new Input(38, 37, 40, 39, 27);
             }
             
-            obstacle1 = new Obstacle(4, 100, 150, 50, 1);
-            obstacle2 = new Obstacle(2, 200, 70, 50, 2);
-            obstacle3 = new Obstacle(4, 300, 150, 50, 1);
-            obstacle4 = new Obstacle(2, 400, 100, 50, 3);
-            obstacle5 = new Obstacle(4, 500, 200, 50, 2);
-            obstacle6 = new Obstacle(2, 600, 100, 50, 1);
+            obstacle1 = new Obstacle(4, 100, 150, 50, 2);
+            obstacle2 = new Obstacle(2, 200, 70, 50, 3);
+            obstacle3 = new Obstacle(4, 300, 150, 50, 2);
+            obstacle4 = new Obstacle(2, 400, 100, 50, 4);
+            obstacle5 = new Obstacle(4, 500, 200, 50, 3);
+            obstacle6 = new Obstacle(2, 600, 100, 50, 2);
             obstacles.Add(obstacle1); obstacles.Add(obstacle2);
             obstacles.Add(obstacle3); obstacles.Add(obstacle4);
             obstacles.Add(obstacle5); obstacles.Add(obstacle6);
